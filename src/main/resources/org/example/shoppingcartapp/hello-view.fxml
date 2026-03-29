@@ -1,16 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.shoppingcartapp.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="Controller">
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <ComboBox fx:id="languageBox" onAction="#changeLanguage"/>
+
+    <Label fx:id="labelItems"/>
+    <TextField fx:id="numItemsField"/>
+
+    <Button fx:id="btnGenerate" onAction="#generateFields"/>
+
+    <VBox fx:id="itemsContainer"/>
+
+    <Button fx:id="btnCalculate" onAction="#calculateTotal"/>
+
+    <Label fx:id="labelTotal"/>
+
 </VBox>
